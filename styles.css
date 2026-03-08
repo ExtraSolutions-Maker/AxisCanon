@@ -79,5 +79,55 @@ nav a { color: var(--accent); text-decoration: none; }
 .trust h3 { margin-top: 4px; }
 .trust li { color: var(--muted); margin: 8px 0; }
 
+.status-board {
+  margin: 12px auto 18px;
+  padding: 14px 16px;
+  border: 1px solid #23305f;
+  background: rgba(20, 27, 52, 0.5);
+  border-radius: 12px;
+}
+
+.status-head h3 {
+  margin: 4px 0 6px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.status-card {
+  background: #111936;
+  border: 1px solid #2a3b73;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.status-card h4 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+}
+
+.status-value {
+  margin: 0;
+  color: #d8e5ff;
+  font-weight: 700;
+}
+
+.status-incidents {
+  margin-top: 12px;
+}
+
+.status-incidents h4 {
+  margin: 4px 0 6px;
+}
+
+.status-incidents li {
+  color: var(--muted);
+  margin: 6px 0;
+}
+
 footer { padding: 22px 0 48px; color: var(--muted); }
 .muted { color: #8ea2cd; }
