@@ -1,0 +1,47 @@
+name: Public Status Timestamp
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "metrics/public-status.json"
+
+permissions:
+  contents: write
+
+jobs:
+  stamp:
+    if: "!contains(github.event.head_commit.message, '[skip status ts]')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update last_updated_utc
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = 'metrics/public-status.json';
+          const raw = fs.readFileSync(path, 'utf8');
+          const data = JSON.parse(raw);
+
+          const d = new Date();
+          const pad = (n) => String(n).padStart(2, '0');
+          const ts = `${d.getUTCFullYear()}-${pad(d.getUTCMonth()+1)}-${pad(d.getUTCDate())} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())} UTC`;
+          data.last_updated_utc = ts;
+
+          fs.writeFileSync(path, JSON.stringify(data, null, 2) + '\n');
+          console.log('Stamped last_updated_utc:', ts);
+          NODE
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metrics/public-status.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update public status timestamp [skip status ts]"
+          git push
