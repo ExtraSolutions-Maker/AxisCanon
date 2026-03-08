@@ -18,4 +18,5 @@ AxisCanon exposes only aggregated trust metrics publicly.
 ## Publishing model
 - Website shows high-level summary cards and status timeline.
 - Include a visible `Last updated: YYYY-MM-DD HH:MM UTC` marker.
+- Source values from `metrics/public-status.json` for one-file updates.
 - Detailed internal observability remains private in `AxisCanon-core` dashboards.

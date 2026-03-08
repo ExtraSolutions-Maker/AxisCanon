@@ -1,0 +1,14 @@
+{
+  "last_updated_utc": "2026-03-08 20:48 UTC",
+  "uptime_30d": "99.95%",
+  "latency": {
+    "p50_ms": 82,
+    "p95_ms": 214
+  },
+  "total_requests_24h": "12.4k",
+  "success_rate_24h": "99.7%",
+  "incidents": [
+    "No active incidents.",
+    "2026-03-06 — Minor latency increase (resolved)."
+  ]
+}
