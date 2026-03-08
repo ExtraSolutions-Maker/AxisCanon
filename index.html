@@ -4,39 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AxisCanon — Deterministic Normalization API</title>
+  <meta name="description" content="AxisCanon is a deterministic normalization API for machine-to-machine workflows with prepaid billing and auditable settlement." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="wrap">
     <h1>AxisCanon</h1>
-    <p class="tag">Deterministic text normalization API for machine-to-machine workflows.</p>
+    <p class="tag">Deterministic normalization API for autonomous agents and backend services.</p>
+
+    <div class="cta-row">
+      <a class="btn primary" href="./docs/capabilities.md">View Capabilities</a>
+      <a class="btn" href="./docs/quotes-and-payments.md">Quotes & Payments</a>
+      <a class="btn" href="./docs/security.md">Security</a>
+    </div>
+
     <nav>
-      <a href="./docs/quotes-and-payments.md">Quotes & Payments</a>
-      <a href="./docs/capabilities.md">Capabilities</a>
-      <a href="./docs/security.md">Security</a>
-      <a href="https://github.com/ExtraSolutions-Maker/AxisCanon-core">Private Core</a>
+      <a href="https://github.com/ExtraSolutions-Maker/AxisCanon">Public Repo</a>
+      <a href="https://github.com/ExtraSolutions-Maker/AxisCanon-core">Core (private)</a>
     </nav>
   </header>
 
   <main class="wrap grid">
     <section class="card">
-      <h2>Built for Agents</h2>
-      <p>Atomic calls, bounded execution, and prepaid-only billing. No surprise debt, no unbounded jobs.</p>
+      <h2>Prepaid-only by design</h2>
+      <p>No credit extension and no negative balances. Billable execution requires reserved funds.</p>
     </section>
 
     <section class="card">
-      <h2>Billing You Can Audit</h2>
-      <p>Estimate → lock funds → execute → settle actual cost → release remainder, with immutable ledger events.</p>
+      <h2>Atomic-only execution</h2>
+      <p>One request, one deterministic transform, one immediate response. No hidden async work.</p>
     </section>
 
     <section class="card">
-      <h2>Self-Serve Onboarding</h2>
-      <p>Public signup quote/intent/status endpoints with idempotency and abuse controls.</p>
+      <h2>Auditable billing</h2>
+      <p>Estimate → lock funds → execute → settle actual cost → release remainder with immutable ledger records.</p>
+    </section>
+
+    <section class="card">
+      <h2>Bounded runtime</h2>
+      <p>Server-side caps for payload size, execution time, and fallback token limits.</p>
     </section>
   </main>
 
+  <section class="wrap trust">
+    <h3>Trust & Guarantees</h3>
+    <ul>
+      <li>Deterministic contract for machine-to-machine reliability</li>
+      <li>Transactional balance updates with lock enforcement</li>
+      <li>Public onboarding flow with idempotency and abuse controls</li>
+    </ul>
+  </section>
+
   <footer class="wrap">
     <p>AxisCanon by ExtraSolutions-Maker</p>
+    <p class="muted">Security disclosure: report vulnerabilities privately to the project owner before public disclosure.</p>
   </footer>
 </body>
 </html>
