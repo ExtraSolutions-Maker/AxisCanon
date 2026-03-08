@@ -29,3 +29,6 @@ Core implementation lives in private repo: `ExtraSolutions-Maker/AxisCanon-core`
 
 ## Public trust metrics
 See `docs/public-metrics.md` for the public-safe metrics surface (uptime, global latency, bucketed requests, success rate, incident history).
+
+## Pricing
+See `docs/pricing.md` for prepaid model details, usage tiers, and top-up structure.
