@@ -26,3 +26,6 @@ Core implementation lives in private repo: `ExtraSolutions-Maker/AxisCanon-core`
 3. Execute normalization
 4. Settle actual cost
 5. Release remainder
+
+## Public trust metrics
+See `docs/public-metrics.md` for the public-safe metrics surface (uptime, global latency, bucketed requests, success rate, incident history).
